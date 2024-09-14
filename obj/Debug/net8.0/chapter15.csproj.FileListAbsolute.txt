@@ -12,3 +12,4 @@ C:\Users\User\Desktop\CSharp Exercises\Exercises\Chapter15\obj\Debug\net8.0\refi
 C:\Users\User\Desktop\CSharp Exercises\Exercises\Chapter15\obj\Debug\net8.0\chapter15.pdb
 C:\Users\User\Desktop\CSharp Exercises\Exercises\Chapter15\obj\Debug\net8.0\chapter15.genruntimeconfig.cache
 C:\Users\User\Desktop\CSharp Exercises\Exercises\Chapter15\obj\Debug\net8.0\ref\chapter15.dll
+C:\Users\User\Desktop\CSharp Exercises\Exercises\Chapter15\obj\Debug\net8.0\chapter15.sourcelink.json
