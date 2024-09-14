@@ -6,7 +6,7 @@ StreamWriter writer = new StreamWriter(path, true);
 
 using (writer)
 {
-    writer.WriteLine("中文嘗試");
+    writer.WriteLine("this is a trial");
 }
 
 StreamReader reader = new StreamReader(path);
