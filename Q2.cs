@@ -2,7 +2,7 @@ using System.Net.Sockets;
 
 class Q2
 {
-    static void Main()
+    static void ans()
     {
         string path1 = "Q2a.txt";
         string path2 = "Q2b.txt";
