@@ -1,0 +1,4 @@
+Write a (start) program that replaces every (start) occurrence of the substring start
+"start" with "finish" in a text file. Can you (start) rewrite the program to
+start replace whole (start) words only? Does the program(start) work for large files (e.g. 800
+startMB)?start

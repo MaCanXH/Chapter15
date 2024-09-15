@@ -1,0 +1,4 @@
+Write a (finish) program that replaces every (finish) occurrence of the substring finish
+"finish" with "finish" in a text file. Can you (finish) rewrite the program to
+finish replace whole (finish) words only? Does the program(finish) work for large files (e.g. 800
+finishMB)?finish
