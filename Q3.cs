@@ -2,7 +2,7 @@ using System.IO.Compression;
 using System.Text;
 class Q3
 {
-    static void Main()
+    static void ans()
     {
         string path = "Q3.txt";
         
