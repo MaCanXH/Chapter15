@@ -10,7 +10,8 @@ class Q10
         {
             string path = "Q10a.txt";
             StreamReader file = new StreamReader(path);
-            StreamWriter temp = new StreamWriter("Q10b.txt");
+            StreamWriter temp = new StreamWriter("Q10b.txt"); //create a file to store the answer
+            //declare variables to store the index of the first and end of the output text
             int startidx = 0;
             int endidx = 0;
 
@@ -19,28 +20,48 @@ class Q10
                 using(file)
                 {
                     string line = file.ReadLine();
+                    //a loop to read every single line of the file
                     while(line != null)
                     {
                         int currentidx = 0;
-                        string outputText;
+                        string outputText; //temp string to store the output
+                        //a loop to search the output text
                         while(currentidx != -1)
                         {
-                            currentidx = line.IndexOf('>', currentidx);
-                            Console.WriteLine(currentidx);
-                            if(currentidx < line.Length - 1)
+                            //ending condition of the loop (e.g. the went it reaches the end index of the line in case '>' is at the end)
+                            if(currentidx >= line.Length - 1)
                             {
-                                if(line[currentidx + 1] != '<')
+                                break;
+                            }
+                            //check if the currentidx is '<' or not, if not, record the output text
+                            if(line[currentidx] != '<')
+                            {
+                                int len;
+                                startidx = currentidx;
+                                //the end of the output text is right before '<'
+                                endidx = line.IndexOf('<', currentidx + 1);
+                                len = endidx - startidx;
+                                //a special case where output text is at the end, '<' cannot be found and may cause the OutOfRange error
+                                if(endidx == -1)
                                 {
-                                    startidx = currentidx + 1;
-                                    endidx = line.IndexOf('<', currentidx + 1);
-                                    outputText = line.Substring(startidx, endidx - startidx + 1);
-                                    temp.WriteLine(outputText);
-                                    currentidx = endidx;
+                                    endidx = line.Length - 1;
+                                    len = line.Length - startidx;
                                 }
-                                else if(line[currentidx + 1] == '<')
-                                {
-                                    currentidx++;
-                                }
+                                outputText = line.Substring(startidx, len);
+                                //write the text in the result file
+                                temp.WriteLine(outputText);
+                                currentidx = endidx;
+                            }
+                            //in case currentidx is '<', continue the checking
+                            else if(line[currentidx] == '<')
+                            {
+                                currentidx++;
+                            }
+                            currentidx = line.IndexOf('>', currentidx);
+                            //condition for special case where output text at the end, if not, continue the checking from next index
+                            if(currentidx != -1)
+                            {
+                                currentidx++;
                             }
                         }
                         line = file.ReadLine();
