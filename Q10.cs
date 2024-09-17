@@ -4,7 +4,7 @@ using System.Transactions;
 
 class Q10
 {
-    static void Main()
+    static void ans()
     {
         try
         {
