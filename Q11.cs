@@ -1,6 +1,6 @@
 class Q11
 {
-    static void Main()
+    static void ans()
     {
         string path = "Q11a.txt";
         StreamReader file = new StreamReader(path);

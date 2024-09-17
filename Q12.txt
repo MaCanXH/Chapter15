@@ -1,0 +1,3 @@
+A text  words.txt is , containing a  of words, one per line.
+Write a program  deletes in the  text.txt  the words 
+occur in the other . Catch and handle  possible exceptions.
